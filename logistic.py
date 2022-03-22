@@ -69,8 +69,9 @@ def processing():
         f = request.args.get('Frequency')
         m = request.args.get('Monetary')
         t = request.args.get('Time')
-        d = {'Recency (months)': [r], 'Frequency (times)': [f], 'Monetary (c.c. blood)': [m], 'Time (months)': [t]}
-        return predictResult(d)
+        d = request.args.get('Distance')
+        E = {'Recency (months)': [r], 'Frequency (times)': [f], 'Monetary (c.c. blood)': [m], 'Time (months)': [t], 'Distance (Km)': [d]}
+        return predictResult(E)
     else:
         return "E"
 
