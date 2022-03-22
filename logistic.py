@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Read in dataset
-transfusion = pd.read_csv('transfusion.data')
+transfusion = pd.read_csv('transfusion_LaoCai.data')
 
 # Print out the first rows of our dataset
 transfusion.head()
@@ -11,7 +11,7 @@ transfusion.head()
 
 # Rename target column as 'target' for brevity 
 transfusion.rename(
-    columns={'whether he/she donated blood in March 2007': 'target'},
+    columns={'whether he/she donated blood in Februry 2022': 'target'},
     inplace=True
 )
 
